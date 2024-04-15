@@ -22,6 +22,5 @@ This QR Code Generator is a simple web application built using Sinatra. It allow
    ```bash
    ruby app.rb
 ## Demo
-
+- Figma [design](https://www.figma.com/file/MFw3v4rhBt5kX93pMXWZYP/QR-Code-Generator-WireFrame?type=design&node-id=0%3A1&mode=design&t=YL12dBNLXASgHf0V-1)
 - URL: [https://qr-code-generator-94io.onrender.com/](https://qr-code-generator-94io.onrender.com/)
-![](qrwebsite_demo.gif)
