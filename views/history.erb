@@ -1,0 +1,58 @@
+        
+<header>
+  <div class="innerHeader">
+    <h1 class="logo"><a href="/">
+        <img src="img/logo.png" alt="logo">
+        <span>color</span>QR
+      </a></h1>
+    <a href="/history" class="menu">History</a>
+    <a href="/" class="menu"><span>Make QR Code</span></a>
+  </div>
+</header>
+
+<section class="main">
+  <div class="inner">
+    <div class="box">
+      <div class="mainTextBox">
+        <div class="history">
+          <% if @history.empty? %>
+            <div class="emptyHistory">
+              <img src="img/empty_file_icon.png" alt="No History">
+              <p>There is no history yet.</p>
+            </div>
+          <% else %>
+            <ul>
+              <% @history.each_with_index do |entry, index| %>
+                <li><span>
+                    <a href="/?url=<%= CGI.escape(entry['url']) %>&codeColor=<%= CGI.escape(entry['code_color']) %>&backgroundColor=<%= CGI.escape(entry['background_color']) %>&size=<%= entry['size'] %>&fileName=<%= CGI.escape(entry['file_name']) %>">
+                      <span>URL </span><%= entry['url'] %><span>Color </span> <%= entry['code_color'] %> <span>Background</span> <%= entry['background_color'] %>
+                      <span>Size </span> <%= entry['size'] %>px <span>File Name </span> <%= entry['file_name'] %>
+                    </a>
+                  </span></li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+      <div class="btnBox">
+        <a href="/" class="btn">Make new QR code</a>
+      </div>
+    </div>
+    <div class="copyright">
+                    <p>DPI Web App Project by <a href="https://www.linkedin.com/in/youngsong-us/">Young </a><span>|</span>  <i class="fab fa-github"></i>   <a href="https://github.com/YoungSong99/qr-code-website">Source Code</a></p>
+                </div>
+            </div>
+            <div class="logoWrap">
+                <span id="c"><img src="img/logo/C.png" alt=""></span>
+                <span id="o"><img src="img/logo/O.png" alt=""></span>
+                <span id="l"><img src="img/logo/L.png" alt=""></span>
+                <span id="o2"><img src="img/logo/O2.png" alt=""></span>
+                <span id="r"><img src="img/logo/R.png" alt=""></span>
+                <span id="q"><img src="img/logo/Q.png" alt=""></span>
+                <span id="r2"><img src="img/logo/R2.png" alt=""></span>
+            </div>
+            <div class="logoWrap-m">
+                <span id="mobileLogo"><img src="img/logo_mobile.png" alt=""></span>
+            </div>
+  </div>
+</section>

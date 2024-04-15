@@ -12,64 +12,6 @@
 </head>
 <body>
     <div class="wrap">
-        <header>
-            <div class="innerHeader">
-                <h1 class="logo"><a href="#">
-                    <img src="img/logo.png" alt="logo">
-                    <span>color</span>QR
-                </a></h1>
-                <a href="#" class="menu"><span>History</span></a>
-                <a href="#" class="menu">Make QR Code</a>
-            </div>
-        </header>
-        <section class="main">
-            <div class="inner">
-                <div class="box">
-                    <div class="mainTextBox">
-                        <h2>Make<br>your<br>Qr<br>code</h2>
-                        <div class="form-container">
-                            <form id="qrForm" action="/generate" method="post">
-                                <div class="form-group">
-                                    <label for="url">URL:</label>
-                                    <input type="text" id="url" name="url" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="codeColor">Code Color:</label>
-                                    <input type="color" id="codeColor" name="codeColor" value="#000000">
-                                </div>
-                                <div class="form-group">
-                                    <label for="backgroundColor">Background Color:</label>
-                                    <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff">
-                                </div>
-                                <div class="form-group">
-                                    <label for="size">Size (px):</label>
-                                    <input type="number" id="size" name="size" value="300">
-                                </div>
-                                <div class="form-group">
-                                    <label for="fileName">File Name:</label>
-                                    <input type="text" id="fileName" name="fileName" placeholder="QrCode">
-                                </div>
-                                <button class="btn" type="submit">Generate</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="btnBox">
-                        <a href="" class="btn">Check Your QR Creation History</a>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>DPI Web App Project by <a href="https://www.linkedin.com/in/youngsong-us/">Young </a><span>|</span>  <i class="fab fa-github"></i>   <a href="https://github.com/YoungSong99/qr-code-website">Source Code</a></p>
-                </div>
-            </div>
-            <div class="logoWrap">
-                <span id="c"><img src="img/logo/C.png" alt=""></span>
-                <span id="o"><img src="img/logo/O.png" alt=""></span>
-                <span id="l"><img src="img/logo/L.png" alt=""></span>
-                <span id="o2"><img src="img/logo/O2.png" alt=""></span>
-                <span id="r"><img src="img/logo/R.png" alt=""></span>
-                <span id="q"><img src="img/logo/Q.png" alt=""></span>
-                <span id="r2"><img src="img/logo/R2.png" alt=""></span>
-            </div>
-        </section>
+        <%= yield %>
     </div>
 </body>

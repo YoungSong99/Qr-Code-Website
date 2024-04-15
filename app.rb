@@ -2,10 +2,18 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'rqrcode'
 require 'chunky_png'
+require "sinatra/cookies"
+require 'cgi'
+
 
 # Main route for the form
 get "/" do
-  erb :layout
+  @url = params['url']
+  @code_color = params['codeColor']
+  @background_color = params['backgroundColor']
+  @size = params['size']
+  @file_name = params['fileName']
+  erb :qrform, layout: :layout
 end
 
 # Route to handle form submission and generate QR code
@@ -37,8 +45,20 @@ post "/generate" do
       size: size
     )
     response.headers['Content-Disposition'] = "attachment; filename=#{file_name}.png"
+    
+    # Save to cookies
+    history = (cookies[:history] ? JSON.parse(cookies[:history]) : [])
+    history.push({url: url, code_color: code_color, background_color: background_color, size: size, file_name: file_name})
+    cookies[:history] = JSON.generate(history)
+    
     png.to_s
   else
     halt 400, "URL is required"
   end
+end
+
+
+get "/history" do
+  @history = cookies[:history] ? JSON.parse(cookies[:history]) : []
+  erb :history
 end
