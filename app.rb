@@ -62,3 +62,6 @@ get "/history" do
   @history = cookies[:history] ? JSON.parse(cookies[:history]) : []
   erb :history
 end
+
+# set :public_folder, settings.root
+# set :images_dir, settings.root
