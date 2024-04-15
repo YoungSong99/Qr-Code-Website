@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
 
 
-/* 00. Reset */
+/* Reset */
 * {margin: 0;padding: 0;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
 a {color: inherit; text-decoration: inherit;}
@@ -32,7 +32,7 @@ section {margin-bottom: 150px;}
 .box {border-radius: 10px; overflow: hidden;}
 .btn {font-size: 15px; margin-top: 30px; padding: 12px 25px; border-radius: 30px; box-sizing: border-box; display: inline-block; background: #fff; color: #000;}
 
-/* main box */
+/* Qr code form */
 .main {position: relative; overflow: hidden;}
 .main .inner {padding: 30px 75px 25px; box-sizing: border-box; display: flex; flex-direction: column; z-index: 2; position: relative;}
 .main .inner .box {padding: 50px 0 0; background: rgba(150,150,150,0.2); backdrop-filter:blur(100px); display: flex; flex-direction: column; flex-grow: 1;}
@@ -54,6 +54,8 @@ section {margin-bottom: 150px;}
 .main .inner .box .mainTextBox .form-container .form-group input[type="text"],
 .main .inner .box .mainTextBox .form-container .form-group input[type="number"]{ width: 100%; padding: 8px 0; background: transparent; border: none; border-bottom: 2px solid #aaa ;color: #ffffff; transition: border-color 0.3s; }
 
+/* History */
+
 .main .inner .box .mainTextBox .history {align-content: center;}
 .main .inner .box .mainTextBox .history li {margin-bottom: 20px;}
 .main .inner .box .mainTextBox .history li a span {font-weight: 500; text-transform: uppercase; margin-left: 10px;}
@@ -63,6 +65,7 @@ section {margin-bottom: 150px;}
 
 .main .logoWrap-m #mobileLogo {display: none;}
 
+/* Mobile */
 
 @media (max-width: 768px) {
   .innerHeader .menu, .main .inner .box .mainTextBox h2, .main .logoWrap img { display: none; }
@@ -72,6 +75,6 @@ section {margin-bottom: 150px;}
   .main .inner .box .mainTextBox .form-container .form-group label { text-align: right; font-size: 15px;}
   .btn {text-align: center;}
   .main .logoWrap-m #mobileLogo {display: block; position:absolute; right: 0; top: 10px; width:60%; max-width: 100%; opacity: 0.7;}
-  .main .inner .box .mainTextBox .history .emptyHistory img {width: 50%;}
+  .main .inner .box .mainTextBox .history .emptyHistory img {width: 25%;}
 
 }
