@@ -63,5 +63,5 @@ get "/history" do
   erb :history
 end
 
-# set :public_folder, settings.root
-# set :images_dir, settings.root
+set :public_folder, settings.root
+set :images_dir, settings.root

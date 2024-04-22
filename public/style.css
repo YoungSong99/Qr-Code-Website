@@ -18,9 +18,10 @@ body {font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; font-
 .wrap {position:relative; margin: 0 auto; background: #00000D; color:#fff; padding-bottom: 500px;}
 
 header {position: relative; padding-top: 30px;  width: 100%; z-index: 100;}
-.innerHeader {height: 80px; padding:0 80px;}
-.innerHeader .logo {width: 170px; height: 60px; float:left; margin-right: 180px}
+.innerHeader {height: 80px; padding:0 80px; }
+.innerHeader .logo {width: 170px; height: 60px; float:left; margin-right: 180px;}
 .innerHeader .logo a img {width: 60px; margin-right: 10px}
+.innerHeader .logo a {display: flex; flex-direction: row; align-items: center;}
 .innerHeader .logo span {font-weight: 200;}
 .innerHeader .menu {float: right; display: block; margin-top: 40px; margin-left: 20px; font-size:20px }
 .innerHeader .menu span {opacity: 0.5}
